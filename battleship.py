@@ -1,11 +1,14 @@
+def render(board_width, board_height):
+    print("+" + " - " * board_width + "+")
 
+    for i in range (board_height):
+        print ("|" + " " * board_width + "|")
+    
 
-hidden_board = [[""] * 8 for x in range (8)]
-guess_board = [[""] * 8 for x in range (8)]
+if __name__ == "__main__":
+    render(10, 10)
 
-
-letters_to_numbers = {'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7}
-
-def board():
-    pass
-
+    inp = input ("where do you want to shoot? \n")
+    xstr, ystr = inp.split(",")
+    x = int(xstr)
+    y = int(ystr)
